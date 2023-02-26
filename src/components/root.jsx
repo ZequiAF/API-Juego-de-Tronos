@@ -1,5 +1,7 @@
 import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
-import { getCharactersByName, getcharacterByHouse, getQuoteByCharacter  } from "../contacts";
+import { getCharactersByName } from "../components/personajes";
+import { getcharacterByHouse } from "../components/casas";
+import { getQuoteByCharacter } from "../components/frases";
 
 //ARREGLAR TODO ROOT
 
