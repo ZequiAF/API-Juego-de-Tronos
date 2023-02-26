@@ -1,17 +1,26 @@
-import React, { Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, } from "react-router-dom";
-import { getContacts, createContact } from "../contacts";
-
-export async function action() {
-  const contact = await createContact();
-  return redirect(`/contacts/${contact.id}/edit`);
-}
+import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
+import { getCharactersByName, getcharacterByHouse, getQuoteByCharacter  } from "../contacts";
 
 //ARREGLAR TODO ROOT
 
-export async function loader() {
-  const contacts = await getContacts();
-  return { contacts };
+export async function personajeLoader() {
+  const characterByName = await getCharactersByName();
+  return { characterByName };
 }
+
+//RESTO DE LOADERS
+export async function casaLoader() {
+  const characterByHouse = await getcharacterByHouse();
+  return { characterByHouse };
+}
+
+export async function fraseLoader() {
+  const quoteByCharacter = await getQuoteByCharacter();
+  return { quoteByCharacter };
+}
+
+
+
 
 export default function Root() {
   const { contacts } = useLoaderData();

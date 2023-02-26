@@ -11,13 +11,13 @@ import {
 import ErrorPage from "./error-page";
 
 //ARREGLAR RUTAS
-import Personaje,{  loader as personajeLoader, } from "./components/personajes";
-import Casa,{  loader as casaLoader, } from "./components/casas";
-import Frase,{  loader as fraseLoader, } from "./components/frases";
+import Personaje,{  personajeLoader } from "./components/personajes";
+import Casa,{ casaLoader } from "./components/casas";
+import Frase,{ fraseLoader, } from "./components/frases";
 
 import Root, { loader as rootLoader, action as rootAction,} from "./components/root";
 
-import { action as destroyAction } from "./components/destroy";
+//import { action as destroyAction } from "./components/destroy";
 
 const router = createBrowserRouter([
   {
@@ -28,10 +28,10 @@ const router = createBrowserRouter([
     action: rootAction,
     // ARREGLAR ABAJO destroy
     children: [
-      {
-        path: "contacts/:limpiar/destroy",
-        action: destroyAction,
-      },
+//      {
+//        path: "contacts/:limpiar/destroy",
+//        action: destroyAction,
+//      },
       {
         path: "components/:contactId",
         element: <Casa />,
