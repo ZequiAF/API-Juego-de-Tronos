@@ -11,9 +11,9 @@ import {
 import ErrorPage from "./error-page";
 
 //ARREGLAR RUTAS
-import Personaje,{  loader as contactLoader, } from "./components/personajes";
-import Casa,{  loader as contactLoader, } from "./components/casas";
-import Frase,{  loader as contactLoader, } from "./components/frases";
+import Personaje,{  loader as personajeLoader, } from "./components/personajes";
+import Casa,{  loader as casaLoader, } from "./components/casas";
+import Frase,{  loader as fraseLoader, } from "./components/frases";
 
 import Root, { loader as rootLoader, action as rootAction,} from "./components/root";
 
@@ -26,22 +26,26 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     loader: rootLoader,
     action: rootAction,
-    // ARREGLAR ABAJO
+    // ARREGLAR ABAJO destroy
     children: [
       {
-        path: "contacts/:contactId/destroy",
+        path: "contacts/:limpiar/destroy",
         action: destroyAction,
       },
       {
-        path: "contacts/:contactId",
-        element: <Contact />,
-        loader: contactLoader,
+        path: "components/:contactId",
+        element: <Casa />,
+        loader: casaLoader,
       },
       {
-        path: "contacts/:contactId/edit",
-        element: <EditContact />,
-        loader: contactLoader,
-        action: editAction,
+        path: "components/:contactId",
+        element: <Personaje />,
+        loader: personajeLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <Frase />,
+        loader: fraseLoader,
       },
     ],
   },
