@@ -1,8 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pokes, setPokes] = useState([]);
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+
+    //declaramos la función asíncrona que llama al servicio  
+    async function fetchPokes() {
+      let p = await getPokes();
+      console.log(p);
+      setPokes(p);
+    }
+     //llamamos a la función
+     fetchPokes()
+
+    }, [])
+
   //METER ALGO
   return (
     <div className="App">

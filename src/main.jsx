@@ -29,6 +29,7 @@ const router = createBrowserRouter([
     // ARREGLAR ABAJO destroy
     children: [
 //      {
+//        DESTRUIR / LIMPIAR RESULTADOS
 //        path: "contacts/:limpiar/destroy",
 //        action: destroyAction,
 //      },

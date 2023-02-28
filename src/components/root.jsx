@@ -10,7 +10,6 @@ export async function personajeLoader() {
   return { characterByName };
 }
 
-//RESTO DE LOADERS
 export async function casaLoader() {
   const characterByHouse = await getcharacterByHouse();
   return { characterByHouse };
@@ -20,8 +19,6 @@ export async function fraseLoader() {
   const quoteByCharacter = await getQuoteByCharacter();
   return { quoteByCharacter };
 }
-
-
 
 
 export default function Root() {

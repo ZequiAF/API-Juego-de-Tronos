@@ -14,13 +14,25 @@
  * 
  */
 
+//PERSONAJES
+//TODOS LOS PERSNAJES --> Listar todos los personajes con sus frases
+const urlCharactersAndQuotes = "https://api.gameofthronesquotes.xyz/v1/characters";
+//UN PERSONAJE --> Mostrar información de 1 personaje de la serie
 const urlCharacters = "https://api.gameofthronesquotes.xyz/v1/character/";
+
+//CASAS
+//TODAS LAS CASAS --> Listar todas las casas
 const urlHouses = "https://api.gameofthronesquotes.xyz/v1/houses";
+//CASA DE UN PERSONAJE --> Listar los miembros que pertenecen a una casa concreta
+const urlHouse = " https://api.gameofthronesquotes.xyz/v1/house/";
+
+//FRASES
+//FRASE ALEATORIA --> Sacar x frases cualquiera de cualquier personaje
+const urlRandomQuote = "https://api.gameofthronesquotes.xyz/v1/random";
+//Sacar x número de frases de un personaje concreto
 const urlQuoteCharacter = "https://api.gameofthronesquotes.xyz/v1/author/"
 const urlQuoteCharacter1 = "https://api.gameofthronesquotes.xyz/v1/author/"
-const urlCharactersAndQuotes = "https://api.gameofthronesquotes.xyz/v1/characters";
-const urlHouse = " https://api.gameofthronesquotes.xyz/v1/house/";
-const urlRandomQuote = "https://api.gameofthronesquotes.xyz/v1/random";
+//FRASES CUALQUIERA --> Sacar 1 frase cualquiera de un personaje concreto
 const urlRandomQuotes = "https://api.gameofthronesquotes.xyz/v1/random/";
 
 export async function getCharactersByName(name) {
