@@ -3,7 +3,7 @@ import { getCharactersAndQuotes } from '../services/gotapi';
 import SearchBox from '../components/SearchBox';
 import CardList from '../components/CardList/CardList';
 
-function Todos_Personaje() {
+function Personajes() {
   const [CharactersAndQuotes, setCharactersAndQuotes] = useState([]);
   const [search, setSearch] = useState('');
   //hook useEffect que se ejecuta para inicializar el componente
@@ -39,4 +39,4 @@ return (
   );
 }
 
-export default Todos_Personaje
+export default Personajes
