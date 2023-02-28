@@ -1,9 +1,17 @@
 import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
+import { getCharactersAndQuotes } from "../components/personaje";
 import { getCharactersByName } from "../components/personajes";
-import { getcharacterByHouse } from "../components/casas";
-import { getQuoteByCharacter } from "../components/frases";
+import { getCharactersByHouse } from "../components/casas";
+import { getHouseBySlug } from "../components/casa";
+import { getRandomQuote } from "../components/frases";
+import { getRandomQuotes } from "../components/xfrases";
+import { getQuoteByCharacter } from "../components/xfrasespersonaje";
+import { getQuoteByCharacter1 } from "../components/frasealeatoriapersonaje";
 
-//ARREGLAR TODO ROOT
+export async function personajesLoader() {
+  const CharactersAndQuotes = await getCharactersAndQuotes();
+  return { CharactersAndQuotes };
+}
 
 export async function personajeLoader() {
   const characterByName = await getCharactersByName();
@@ -11,13 +19,33 @@ export async function personajeLoader() {
 }
 
 export async function casaLoader() {
-  const characterByHouse = await getcharacterByHouse();
-  return { characterByHouse };
+  const charactersByHouse = await getCharactersByHouse();
+  return { charactersByHouse };
+}
+
+export async function casasLoader() {
+  const charactersByHouse = await getHouseBySlug();
+  return { charactersByHouse };
 }
 
 export async function fraseLoader() {
+  const RandomQuote = await getRandomQuote();
+  return { RandomQuote };
+}
+
+export async function frasesLoader() {
+  const RandomQuotes = await getRandomQuotes();
+  return { RandomQuotes };
+}
+
+export async function xfrasespersonajeLoader() {
   const quoteByCharacter = await getQuoteByCharacter();
   return { quoteByCharacter };
+}
+
+export async function frasespersonajeLoader() {
+  const quoteByCharacter1 = await getQuoteByCharacter1();
+  return { quoteByCharacter1 };
 }
 
 
