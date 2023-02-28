@@ -33,7 +33,7 @@ return (
           placeholder="Búsqueda personaje"
           onSearchChange={(e) => setSearch(e.target.value)}
           />
-          <CardList CharactersByName={filteredCharaters} />
+          <CardList CharactersAndQuotes={filteredCharaters} />
       </header>
       </div>
   );

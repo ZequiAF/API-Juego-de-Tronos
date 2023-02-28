@@ -3,8 +3,6 @@ import { getHouseBySlug } from '../services/gotapi';
 import SearchBox from '../components/SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
-//FALTA: Listar los miembros que pertenecen a una casa concreta
-
 function Casa() {
     const [HouseBySlug, setHouseBySlug] = useState([]);
     const [search, setSearch] = useState('');
@@ -35,7 +33,7 @@ function Casa() {
             placeholder="Búsqueda casas"
             onSearchChange={(e) => setSearch(e.target.value)}
             />
-            <CardList CharactersByHouse={filteredHouse} />
+            <CardList HouseBySlug={filteredHouse} />
         </header>
         </div>
     );

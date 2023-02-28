@@ -3,8 +3,6 @@ import { getCharactersByHouse } from '../services/gotapi';
 import SearchBox from '../components/SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
-//FALTA: Listar los miembros que pertenecen a una casa concreta
-
 function Casa() {
     const [CharactersByHouse, setCharactersByHouse] = useState([]);
     const [search, setSearch] = useState('');
