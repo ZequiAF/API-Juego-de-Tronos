@@ -35,6 +35,13 @@ const urlQuoteCharacter1 = "https://api.gameofthronesquotes.xyz/v1/author/"
 //FRASES CUALQUIERA --> Sacar 1 frase cualquiera de un personaje concreto
 const urlRandomQuotes = "https://api.gameofthronesquotes.xyz/v1/random/";
 
+export async function getCharactersAndQuotes() {
+    const urlFetch = urlCharactersAndQuotes;
+    const response = await fetch(urlFetch);
+    const json = await response.json();
+    return json;
+}
+
 export async function getCharactersByName(name) {
     const urlFetch = urlCharacters + name;
     const response = await fetch(urlFetch);
@@ -49,27 +56,6 @@ export async function getCharactersByHouse() {
     return json;
 }
 
-export async function getQuoteByCharacter(name, numero) {
-    const urlFetch = urlQuoteCharacter + name + "/" + numero;
-    const response = await fetch(urlFetch);
-    const json = await response.json();
-    return json;
-}
-
-export async function getQuoteByCharacter1(name) {
-    const urlFetch = urlQuoteCharacter1 + name + "/1";
-    const response = await fetch(urlFetch);
-    const json = await response.json();
-    return json;
-}
-
-export async function getCharactersAndQuotes() {
-    const urlFetch = urlCharactersAndQuotes;
-    const response = await fetch(urlFetch);
-    const json = await response.json();
-    return json;
-}
-
 export async function getHouseBySlug(slug) {
     const urlFetch = urlHouse + slug;
     const response = await fetch(urlFetch);
@@ -79,6 +65,20 @@ export async function getHouseBySlug(slug) {
 
 export async function getRandomQuote() {
     const urlFetch = urlRandomQuote;
+    const response = await fetch(urlFetch);
+    const json = await response.json();
+    return json;
+}
+
+export async function getQuoteByCharacter(name, numero) {
+    const urlFetch = urlQuoteCharacter + name + "/" + numero;
+    const response = await fetch(urlFetch);
+    const json = await response.json();
+    return json;
+}
+
+export async function getQuoteByCharacter1(name) {
+    const urlFetch = urlQuoteCharacter1 + name + "/1";
     const response = await fetch(urlFetch);
     const json = await response.json();
     return json;
