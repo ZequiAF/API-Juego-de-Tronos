@@ -2,7 +2,14 @@ import React, { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [pokes, setPokes] = useState([]);
+  const [personaje, setCharactersAndQuotes] = useState([]);
+  const [personajes, setCharactersByName] = useState([]);
+  const [casas, setCharactersByHouse] = useState([]);
+  const [casa, setHouseBySlug] = useState([]);
+  const [frasealeatoria, setRandomQuote] = useState([]);
+  const [frasesaleatorias, setRandomQuotes] = useState([]);
+  const [xfrasespersonaje, setQuoteByCharacter] = useState([]);
+  const [frasealeatoriapersonaje, setQuoteByCharacter1] = useState([]);
   const [search, setSearch] = useState('');
 
   useEffect(() => {

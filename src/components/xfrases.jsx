@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getRandomQuotes } from '../services/gotapi';
-import SearchBox from '../components/SearchBox/SearchBox';
-import CardList from '../components/CardList/CardList';
+import SearchBox from './SearchBox/SearchBox';
+import CardList from './CardList/CardList';
 
 function FrasesAleatorias() {
     const [RandomQuotes, setRandomQuotes] = useState([]);
@@ -11,9 +11,9 @@ function FrasesAleatorias() {
 
     //declaramos la función asíncrona que llama al servicio  
     async function fetchRandomQuotes() {
-      let qbc = await getRandomQuotes();
-      console.log(qbc);
-      setRandomQuotes(qbc);
+      let rqs = await getRandomQuotes();
+      console.log(rqs);
+      setRandomQuotes(rqs);
     }
 
     //llamamos a la función

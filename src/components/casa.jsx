@@ -11,9 +11,9 @@ function Casa() {
 
     //declaramos la función asíncrona que llama al servicio  
     async function fetchHouseBySlug() {
-      let cbn = await getHouseBySlug();
-      console.log(cbn);
-      setHouseBySlug(cbn);
+      let hbs = await getHouseBySlug();
+      console.log(hbs);
+      setHouseBySlug(hbs);
     }
 
     //llamamos a la función

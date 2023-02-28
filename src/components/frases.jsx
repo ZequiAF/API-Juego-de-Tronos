@@ -11,9 +11,9 @@ function FraseAleatoria() {
 
     //declaramos la función asíncrona que llama al servicio  
     async function fetchRandomQuote() {
-      let qbc = await getRandomQuote();
-      console.log(qbc);
-      setRandomQuote(qbc);
+      let rq = await getRandomQuote();
+      console.log(rq);
+      setRandomQuote(rq);
     }
 
     //llamamos a la función

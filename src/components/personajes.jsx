@@ -11,9 +11,9 @@ function Personajes() {
 
   //declaramos la función asíncrona que llama al servicio  
   async function fetchCharactersAndQuotes() {
-    let cbn = await getCharactersAndQuotes();
-    console.log(cbn);
-    setCharactersAndQuotes(cbn);
+    let caq = await getCharactersAndQuotes();
+    console.log(caq);
+    setCharactersAndQuotes(caq);
   }
 
   //llamamos a la función

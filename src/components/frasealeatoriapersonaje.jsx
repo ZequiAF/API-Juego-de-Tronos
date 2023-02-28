@@ -11,9 +11,9 @@ function FrasesPersonaje() {
 
     //declaramos la función asíncrona que llama al servicio  
     async function fetchQuoteByCharacter1() {
-      let qbc = await getQuoteByCharacter1();
-      console.log(qbc);
-      setQuoteByCharacter1(qbc);
+      let qbc1 = await getQuoteByCharacter1();
+      console.log(qbc1);
+      setQuoteByCharacter1(qbc1);
     }
 
     //llamamos a la función
