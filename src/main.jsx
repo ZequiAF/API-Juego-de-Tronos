@@ -10,10 +10,13 @@ import {
 
 import ErrorPage from "./error-page";
 
-//ARREGLAR RUTAS
-import Personaje,{  personajeLoader } from "./components/personajes";
-import Casa,{ casaLoader } from "./components/casas";
-import Frase,{ fraseLoader, } from "./components/frases";
+//ARREGLAR 
+import Personajes,{  personajesLoader } from "./components/personajes";
+import Personaje,{  personajeLoader } from "./components/personaje";
+import Casas,{ casasLoader } from "./components/casas";
+import Casa,{ casaLoader } from "./components/casa";
+import FrasesAleatorias,{ frasesLoader, } from "./components/frases";
+import FrasesPersonaje,{ frasespersonajeLoader, } from "./components/frasespersonaje";
 
 import Root, { loader as rootLoader, action as rootAction,} from "./components/root";
 
@@ -35,8 +38,8 @@ const router = createBrowserRouter([
 //      },
       {
         path: "components/:contactId",
-        element: <Casa />,
-        loader: casaLoader,
+        element: <Personajes />,
+        loader: personajesLoader,
       },
       {
         path: "components/:contactId",
@@ -45,8 +48,33 @@ const router = createBrowserRouter([
       },
       {
         path: "components/:contactId",
-        element: <Frase />,
-        loader: fraseLoader,
+        element: <Casas />,
+        loader: casasLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <Casa />,
+        loader: casaLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <FrasesAleatorias />,
+        loader: frasesLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <FrasesPersonaje />,
+        loader: frasespersonajeLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <FrasesAleatorias />,
+        loader: frasesLoader,
+      },
+      {
+        path: "components/:contactId",
+        element: <FrasesAleatorias />,
+        loader: frasesLoader,
       },
     ],
   },

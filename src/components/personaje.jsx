@@ -20,7 +20,7 @@ function Personaje() {
     fetchCharactersByName()
 
   }, [])
-  const filteredCharaters = CharactersByName.filter(character => {
+  const filteredCharater = CharactersByName.filter(character => {
     return character.name.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -33,7 +33,7 @@ function Personaje() {
             placeholder="Búsqueda personaje"
             onSearchChange={(e) => setSearch(e.target.value)}
             />
-            <CardList CharactersByName={filteredCharaters} />
+            <CardList CharactersByName={filteredCharater} />
         </header>
         </div>
     );

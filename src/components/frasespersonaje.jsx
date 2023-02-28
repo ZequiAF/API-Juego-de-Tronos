@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getRandomQuote } from '../services/gotapi';
+import { getQuoteByCharacter } from '../services/gotapi';
 import SearchBox from '../components/SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
@@ -9,24 +9,24 @@ import CardList from '../components/CardList/CardList';
  * Sacar 1 frase cualquiera de un personaje concreto:
  */
 
-function FrasesAleatorias() {
-    const [RandomQuote, setRandomQuote] = useState([]);
+function FrasesPersonaje() {
+    const [QuoteByCharacter, setQuoteByCharacter] = useState([]);
     const [search, setSearch] = useState('');
     //hook useEffect que se ejecuta para inicializar el componente
     useEffect(() => {
 
     //declaramos la función asíncrona que llama al servicio  
-    async function fetchRandomQuote() {
-      let qbc = await getRandomQuote();
+    async function fetchQuoteByCharacter() {
+      let qbc = await getQuoteByCharacter();
       console.log(qbc);
-      setRandomQuote(qbc);
+      setQuoteByCharacter(qbc);
     }
 
     //llamamos a la función
-    fetchRandomQuote()
+    fetchQuoteByCharacter()
 
   }, [])
-  const filteredQuote = RandomQuote.filter(quote => {
+  const filteredQuotes = QuoteByCharacter.filter(quote => {
     return quote.name.toLowerCase().includes(search.toLowerCase());
   });
 
@@ -39,11 +39,10 @@ function FrasesAleatorias() {
             placeholder="Búsqueda frases"
             onSearchChange={(e) => setSearch(e.target.value)}
             />
-            <CardList QuoteByCharacter={filteredQuote} />
+            <CardList QuoteByCharacter={filteredQuotes} />
         </header>
         </div>
     );
   }
   
-  export default FrasesAleatorias
-  
+  export default FrasesPersonaje
