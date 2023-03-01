@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getRandomQuotes } from '../services/gotapi';
-import SearchBox from './SearchBox/SearchBox';
-import CardList from './CardList/CardList';
+import SearchBox from '../components/SearchBox/SearchBox';
+import CardList from '../components/CardList/CardList';
 
 function FrasesAleatorias() {
     const [RandomQuotes, setRandomQuotes] = useState([]);

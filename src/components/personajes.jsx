@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getCharactersAndQuotes } from '../services/gotapi';
-import SearchBox from '../components/SearchBox';
+import SearchBox from '../components/SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
 function Personajes() {
