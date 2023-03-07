@@ -13,7 +13,7 @@ import ErrorPage from "./error-page";
 import Personajes,{  personajesLoader } from "./components/personajes";
 import Personaje,{  personajeLoader } from "./components/personaje";
 import Casas,{ casasLoader } from "./components/casas";
-import Casa,{ casaLoader } from "./components/casa";
+import Casa,{ casaLoader } from "./components/Navbar/casa";
 import FraseAleatoria,{ fraseLoader, } from "./components/frases";
 import FrasesAleatorias,{ frasesLoader, } from "./components/xfrases";
 import XFrasesPersonaje,{ xfrasespersonajeLoader, } from "./components/xfrasespersonaje";

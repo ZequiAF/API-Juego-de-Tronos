@@ -1,12 +1,12 @@
 import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
-import { getCharactersAndQuotes } from "../components/personaje";
-import { getCharactersByName } from "../components/personajes";
-import { getCharactersByHouse } from "../components/casas";
-import { getHouseBySlug } from "../components/casa";
-import { getRandomQuote } from "../components/frases";
-import { getRandomQuotes } from "../components/xfrases";
-import { getQuoteByCharacter } from "../components/xfrasespersonaje";
-import { getQuoteByCharacter1 } from "../components/frasealeatoriapersonaje";
+import { getCharactersAndQuotes } from "../Navbar/personaje";
+import { getCharactersByName } from "../Navbar/personajes";
+import { getCharactersByHouse } from "../Navbar/casas";
+import { getHouseBySlug } from "../Navbar/casa";
+import { getRandomQuote } from "../Navbar/frases";
+import { getRandomQuotes } from "../Navbar/xfrases";
+import { getQuoteByCharacter } from "../Navbar/xfrasespersonaje";
+import { getQuoteByCharacter1 } from "../Navbar/frasealeatoriapersonaje";
 
 export async function personajesLoader() {
   const CharactersAndQuotes = await getCharactersAndQuotes();
