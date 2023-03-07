@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { getHouseBySlug } from '../services/gotapi';
-import SearchBox from '../components/SearchBox/SearchBox';
-import CardList from '../components/CardList/CardList';
+import { getHouseBySlug } from '../../services/gotapi';
+import SearchBox from '../SearchBox/SearchBox';
+import CardList from '../CardList/CardList';
 
 function Casa() {
     const [HouseBySlug, setHouseBySlug] = useState([]);
