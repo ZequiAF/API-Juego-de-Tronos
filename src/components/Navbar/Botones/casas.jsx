@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getCharactersByHouse } from '../services/gotapi';
-import SearchBox from '../components/SearchBox/SearchBox';
+import SearchBox from '../SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
 function Casa() {

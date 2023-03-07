@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { getQuoteByCharacter } from '../services/gotapi';
-import SearchBox from '../components/SearchBox/SearchBox';
+import { getRandomQuotes } from '../services/gotapi';
+import SearchBox from '../SearchBox/SearchBox';
 import CardList from '../components/CardList/CardList';
 
-function XFrasesPersonaje() {
-    const [QuoteByCharacter, setQuoteByCharacter] = useState([]);
+function FrasesAleatorias() {
+    const [RandomQuotes, setRandomQuotes] = useState([]);
     const [search, setSearch] = useState('');
     //hook useEffect que se ejecuta para inicializar el componente
     useEffect(() => {
 
     //declaramos la función asíncrona que llama al servicio  
-    async function fetchQuoteByCharacter() {
-      let qbc = await getQuoteByCharacter();
-      console.log(qbc);
-      setQuoteByCharacter(qbc);
+    async function fetchRandomQuotes() {
+      let rqs = await getRandomQuotes();
+      console.log(rqs);
+      setRandomQuotes(rqs);
     }
 
     //llamamos a la función
-    fetchQuoteByCharacter()
+    fetchRandomQuotes()
 
   }, [])
-  const filteredQuotes = QuoteByCharacter.filter(quote => {
-    return quote.name.toLowerCase().includes(search.toLowerCase());
+  const filteredQuotes = RandomQuotes.filter(quotes => {
+    return quotes.name.toLowerCase().includes(search.toLowerCase());
   });
 
   //renderizado del componente:
@@ -33,10 +33,10 @@ function XFrasesPersonaje() {
             placeholder="Búsqueda frases"
             onSearchChange={(e) => setSearch(e.target.value)}
             />
-            <CardList QuoteByCharacter={filteredQuotes} />
+            <CardList RandomQuotes={filteredQuotes} />
         </header>
         </div>
     );
   }
   
-  export default XFrasesPersonaje
+  export default FrasesAleatorias
