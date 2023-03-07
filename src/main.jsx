@@ -10,18 +10,18 @@ import {
 import ErrorPage from "./error-page";
 
 //ARREGLAR 
-import Personajes,{  personajesLoader } from "./components/personajes";
-import Personaje,{  personajeLoader } from "./components/personaje";
-import Casas,{ casasLoader } from "./components/casas";
-import Casa,{ casaLoader } from "./components/Navbar/casa";
-import FraseAleatoria,{ fraseLoader, } from "./components/frases";
-import FrasesAleatorias,{ frasesLoader, } from "./components/xfrases";
-import XFrasesPersonaje,{ xfrasespersonajeLoader, } from "./components/xfrasespersonaje";
-import FrasesPersonaje,{ frasespersonajeLoader, } from "./components/frasealeatoriapersonaje";
+import Personajes,{  personajesLoader } from "../src/components/Navbar/Botones/personajes";
+import Personaje,{  personajeLoader } from "../src/components/Navbar/Botones/personaje";
+import Casas,{ casasLoader } from "../src/components/Navbar/Botones/casas";
+import Casa,{ casaLoader } from "../src/components/Navbar/Botones/casa";
+import FraseAleatoria,{ fraseLoader, } from "../src/components/Navbar/Botones/frases";
+import FrasesAleatorias,{ frasesLoader, } from "../src/components/Navbar/Botones/xfrases";
+import XFrasesPersonaje,{ xfrasespersonajeLoader, } from "../src/components/Navbar/Botones/xfrasespersonaje";
+import FrasesPersonaje,{ frasespersonajeLoader, } from "../src/components/Navbar/Botones/frasealeatoriapersonaje";
 
-import Root, { loader as rootLoader, action as rootAction,} from "./components/root";
+import Root, { loader as rootLoader, action as rootAction,} from "../src/components/Navbar/Botones/root";
 
-//import { action as destroyAction } from "./components/destroy";
+//import { action as destroyAction } from "../src/components/Navbar/Botones/destroy";
 
 const router = createBrowserRouter([
   {
