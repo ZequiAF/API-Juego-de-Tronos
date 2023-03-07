@@ -25,8 +25,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /*display: flex;
+  place-items: center;*/
   min-width: 320px;
   min-height: 100vh;
 }
@@ -66,4 +66,75 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body{
+  background-image: url("https://lossietereinos.com/wp-content/uploads/2012/10/El-Muro.png");
+  background-size: cover;
+}
+/*MI CODIGO CSS*/
+header{
+  background-color: #1a1a1a7a;
+  width: 100%;
+  min-height: 100px;
+}
+#cuerpo{
+  min-height: 400px;
+  width: 100%;
+}
+.prenav{
+  float: left;
+}
+.navegador{
+  padding-top: 2.5%; 
+  text-align: center;
+}
+.cb{
+  clear: both;
+}
+.btn {
+  border-color: #000000;
+  color: #fff !important;
+  box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #000000;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  min-width: 132.12px;
+  min-height: 37.33px;
+  width: 50%;
+}
+.btn:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #000000;
+  color: white !important;
+}
+#cuerpo_personajes{
+  padding-top: 10px;
+  width: 100%;
+  min-height: 500px;
+}
+#cuerpo_casas{
+  padding-top: 10px;
+  display: none;
+  width: 100%;
+  min-height: 500px;
+}
+#cuerpo_frases{
+  padding-top: 10px;
+  display: none;
+  width: 100%;
+  min-height: 500px;
+}
+.resultado_tipo{
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #646cff;
+}
+.row-fixed{
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.img-max img{
+  width: 100%;
+}
+.texto{
+  padding-left: 2%;
 }
