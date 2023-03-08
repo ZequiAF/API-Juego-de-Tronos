@@ -10,16 +10,16 @@ import {
 import ErrorPage from "./error-page";
 
 //ARREGLAR 
-import Personajes,{  personajesLoader } from "./components/Navbar/Botones/personajes/personajes";
-import Personaje,{  personajeLoader } from "./components/Navbar/Botones/personajes/personaje";
-import Casas,{ casasLoader } from "../src/components/Navbar/Botones/casas/casas";
-import Casa,{ casaLoader } from "./components/Navbar/Botones/casas/casa";
-import FraseAleatoria,{ fraseLoader, } from "../src/components/Navbar/Botones/frases/frases";
-import FrasesAleatorias,{ frasesLoader, } from "../src/components/Navbar/Botones/frases/xfrases";
-import XFrasesPersonaje,{ xfrasespersonajeLoader, } from "../src/components/Navbar/Botones/frases/xfrasespersonaje";
-import FrasesPersonaje,{ frasespersonajeLoader, } from "./components/Navbar/Botones/frases/frasealeatoriapersonaje";
+import Personajes from "./components/Navbar/Botones/personajes/personajes";
+import Personaje from "./components/Navbar/Botones/personajes/personaje";
+import Casas from "../src/components/Navbar/Botones/casas/casas";
+import Casa from "./components/Navbar/Botones/casas/casa";
+import FraseAleatoria from "../src/components/Navbar/Botones/frases/frases";
+import FrasesAleatorias from "../src/components/Navbar/Botones/frases/xfrases";
+import XFrasesPersonaje from "../src/components/Navbar/Botones/frases/xfrasespersonaje";
+import FrasesPersonaje from "./components/Navbar/Botones/frases/frasealeatoriapersonaje";
 
-import Root, { loader as rootLoader, action as rootAction,} from "../src/components/root";
+import Root, { personajesLoader, personajeLoader, casasLoader, casaLoader, fraseLoader, frasesLoader, xfrasespersonajeLoader, frasespersonajeLoader, loader as rootLoader, action as rootAction,} from "../src/components/root";
 
 //import { action as destroyAction } from "../src/components/Navbar/Botones/destroy";
 
