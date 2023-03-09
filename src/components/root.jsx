@@ -1,55 +1,55 @@
-import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
-import { getCharactersAndQuotes } from "../components/Navbar/Botones/personajes/personaje";
-import { getCharactersByName } from "../components/Navbar/Botones/personajes/personajes";
-import { getCharactersByHouse } from "../components/Navbar/Botones/casas/casas";
-import { getHouseBySlug } from "../components/Navbar/Botones/casas/casa";
-import { getRandomQuote } from "../components/Navbar/Botones/frases/frases";
-import { getRandomQuotes } from "../components/Navbar/Botones/frases/xfrases";
-import { getQuoteByCharacter } from "../components/Navbar/Botones/frases/xfrasespersonaje";
-import { getQuoteByCharacter1 } from "../components/Navbar/Botones/frases/frasealeatoriapersonaje";
+//import React, { Outlet, NavLink, useLoaderData, Form, useNavigation, } from "react-router-dom";
+import { Personajes } from "../components/Navbar/Botones/personajes/personajes"
+import { Personaje } from "../components/Navbar/Botones/personajes/personaje";
+import { Casas } from "../components/Navbar/Botones/casas/casas";
+import { Casa } from "../components/Navbar/Botones/casas/casa";
+import { FraseAleatoria } from "../components/Navbar/Botones/frases/frases";
+import { FrasesAleatorias } from "../components/Navbar/Botones/frases/xfrases";
+import { XFrasesPersonaje } from "../components/Navbar/Botones/frases/xfrasespersonaje";
+import { FrasesPersonaje } from "../components/Navbar/Botones/frases/frasealeatoriapersonaje";
 
 export async function personajesLoader() {
-  const CharactersAndQuotes = await getCharactersAndQuotes();
+  const CharactersAndQuotes = await Personajes();
   return { CharactersAndQuotes };
 }
 
 export async function personajeLoader() {
-  const characterByName = await getCharactersByName();
+  const characterByName = await Personaje();
   return { characterByName };
 }
 
 export async function casaLoader() {
-  const charactersByHouse = await getCharactersByHouse();
+  const charactersByHouse = await Casas();
   return { charactersByHouse };
 }
 
 export async function casasLoader() {
-  const charactersByHouse = await getHouseBySlug();
+  const charactersByHouse = await Casa();
   return { charactersByHouse };
 }
 
 export async function fraseLoader() {
-  const RandomQuote = await getRandomQuote();
+  const RandomQuote = await FraseAleatoria();
   return { RandomQuote };
 }
 
 export async function frasesLoader() {
-  const RandomQuotes = await getRandomQuotes();
+  const RandomQuotes = await FrasesAleatorias();
   return { RandomQuotes };
 }
 
 export async function xfrasespersonajeLoader() {
-  const quoteByCharacter = await getQuoteByCharacter();
+  const quoteByCharacter = await XFrasesPersonaje();
   return { quoteByCharacter };
 }
 
 export async function frasespersonajeLoader() {
-  const quoteByCharacter1 = await getQuoteByCharacter1();
+  const quoteByCharacter1 = await FrasesPersonaje();
   return { quoteByCharacter1 };
 }
 
 
-export default function Root() {
+/*export function Root() {
   const { contacts } = useLoaderData();
   const navigation = useNavigation();
   return (
@@ -122,3 +122,4 @@ export default function Root() {
     </>
   );
 }
+*/

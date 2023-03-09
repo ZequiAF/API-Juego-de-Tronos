@@ -40,13 +40,13 @@ const router = createBrowserRouter([
       // PERSONAJES
       // Listar todos los personajes con sus frases
       {
-        path: "/",
+        path: "personajes",
         element: <Personajes />,
         loader: personajesLoader,
       },
       // Mostrar información de 1 personaje de la serie
       {
-        path: "/",
+        path: "personaje/:name",
         element: <Personaje />,
         loader: personajeLoader,
       },
@@ -54,13 +54,13 @@ const router = createBrowserRouter([
       // CASAS
       // Listar todas las casas
       {
-        path: "/",
+        path: "casas",
         element: <Casas />,
         loader: casasLoader,
       },
       // Listar los miembros que pertenecen a una casa concreta
       {
-        path: "/",
+        path: "casa/:house",
         element: <Casa />,
         loader: casaLoader,
       },
@@ -68,25 +68,25 @@ const router = createBrowserRouter([
       // FRASES
       // Mostrar una frase cualquiera
       {
-        path: "/",
+        path: "frases/:frases",
         element: <FraseAleatoria />,
         loader: fraseLoader,
       },
       // Sacar x frases cualquiera de cualquier personaje
       {
-        path: "/",
+        path: "xfrases/:numero",
         element: <FrasesAleatorias />,
         loader: frasesLoader,
       },
       // Sacar x número de frases de un personaje concreto
       {
-        path: "/",
+        path: "xfrasespersonaje/:nombreynumero",
         element: <XFrasesPersonaje />,
         loader: xfrasespersonajeLoader,
       },
       // Sacar 1 frase cualquiera de un personaje concreto
       {
-        path: "/",
+        path: "frasealeatoriapersonaje/:name",
         element: <FrasesPersonaje />,
         loader: frasespersonajeLoader,
       },
