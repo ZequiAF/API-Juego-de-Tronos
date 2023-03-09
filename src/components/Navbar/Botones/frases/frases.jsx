@@ -3,7 +3,7 @@ import { getRandomQuote } from '../../../../services/gotapi';
 import SearchBox from '../../SearchBox/SearchBox';
 import CardList from '../../../CardList/CardList';
 
-function FraseAleatoria() {
+export function FraseAleatoria() {
     const [RandomQuote, setRandomQuote] = useState([]);
     const [search, setSearch] = useState('');
     //hook useEffect que se ejecuta para inicializar el componente
@@ -38,6 +38,5 @@ function FraseAleatoria() {
         </div>
     );
   }
-  
-  export default FraseAleatoria
+
   

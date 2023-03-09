@@ -3,7 +3,7 @@ import { getCharactersByName } from '../../../../services/gotapi';
 import SearchBox from '../../SearchBox/SearchBox';
 import CardList from '../../../CardList/CardList';
 
-function Personaje() {
+export function Personaje() {
     const [CharactersByName, setCharactersByName] = useState([]);
     const [search, setSearch] = useState('');
     //hook useEffect que se ejecuta para inicializar el componente
@@ -36,7 +36,6 @@ function Personaje() {
             <CardList CharactersByName={filteredCharater} />
         </header>
         </div>
-    );
-  }
+  );
+}
   
-  export default Personaje

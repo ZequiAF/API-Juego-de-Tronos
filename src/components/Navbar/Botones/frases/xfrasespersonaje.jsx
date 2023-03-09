@@ -3,7 +3,7 @@ import { getQuoteByCharacter } from '../../../../services/gotapi';
 import SearchBox from '../../SearchBox/SearchBox';
 import CardList from '../../../CardList/CardList';
 
-function XFrasesPersonaje() {
+export function XFrasesPersonaje() {
     const [QuoteByCharacter, setQuoteByCharacter] = useState([]);
     const [search, setSearch] = useState('');
     //hook useEffect que se ejecuta para inicializar el componente
@@ -38,5 +38,3 @@ function XFrasesPersonaje() {
         </div>
     );
   }
-  
-  export default XFrasesPersonaje
