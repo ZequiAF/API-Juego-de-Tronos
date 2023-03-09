@@ -21,7 +21,7 @@ export function Casa() {
 
   }, [])
   const filteredHouse = HouseBySlug.filter(houseslug => {
-    return houseslug.name.toLowerCase().includes(search.toLowerCase());
+    return houseslug.slug.toLowerCase().includes(search.toLowerCase());
   });
 
   //renderizado del componente:
