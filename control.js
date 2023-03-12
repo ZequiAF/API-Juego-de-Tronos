@@ -17,3 +17,4 @@ function frases_exe(){
     cuerpo_casas.style.display="none";
     cuerpo_frases.style.display="flex";
 }
+

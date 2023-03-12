@@ -1,3 +1,19 @@
+/*
+ * EJEMPLO POKEAPI
+ *
+ * const URL_POKE = "https://pokeapi.co/api/v2/pokemon?limit=500";
+ *
+ * //función que devuelve todos los pokemons de la API
+ * export async function getPokes(){
+ * let data = await fetch(URL_POKE);
+ * let pokes = await data.json();
+ * console.log(pokes);
+ * return pokes.results;
+ *
+ * }
+ * 
+ */
+
 //PERSONAJES
 //TODOS LOS PERSNAJES --> Listar todos los personajes con sus frases
 const urlCharactersAndQuotes = "https://api.gameofthronesquotes.xyz/v1/characters";
@@ -33,6 +49,25 @@ export async function getCharactersByName(name) {
     const json = await response.json();
     return json;
 }
+
+//PRUEBA EN API A CAPELA
+/*
+const divpersonaje = document.getElementById("root");
+const name =  "jon";
+getCharactersByName(name)
+.then(characters=>{
+    characters.forEach(element => {
+        var mostrar = `<div className="card2">
+                            <p>Nombre: ${element.name}</p>
+                            <p>Nombre: ${element.slug}</p>
+                            <p>Linaje: ${element.house.slug}</p>
+                            <p>Nombre de la casa: ${element.house.name}</p>
+                            <p>Frases: ${element.quotes}</p>
+        </div>`;
+        divpersonaje.innerHTML += mostrar;
+    });
+});
+*/
 
 export async function getCharactersByHouse() {
     const urlFetch = urlHouses;
