@@ -1,5 +1,19 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import "../../../../index.css";
+
+// PROP TYPES!
+import PropTypes from 'prop-types';
+// DECLARAMOS LO QUE VA A HACER LA PROPTYPE
+const Header2 = ({label}) => <u><h2>{label}</h2></u>
+const Paragrhafing = ({label}) => <p>{label}</p>
+// DECIMOS QUE SEA STRING REQUERIDO
+Header2.propTypes = {
+  label: PropTypes.string.isRequired
+}
+Paragrhafing.propTypes = {
+  label: PropTypes.string.isRequired
+}
 
 export async function loader() {
   return null;
@@ -11,9 +25,9 @@ export default function frases() {
       <div>
         <div id="cuerpo_frases" className="row">
         <div className="texto col-6">
-          <h2><u>Frases</u></h2>
+          <Header2 label="Frases"/>
           <div>
-            <p>Listar una frase aleatoria:</p>
+            <Paragrhafing label="Listar una frase aleatoria:"/>
             <Link to="buscar_frase_aleatoria"><button className="btn_busqueda">
               FRASE ALEATORIA
             </button></Link>
@@ -21,7 +35,7 @@ export default function frases() {
           <br />
 
           <div>
-            <p>Buscar un número de frases aleatorias.</p>
+            <Paragrhafing label="Buscar un número de frases aleatorias."/>
             <div>
               Nº<input type="number" id="numerofrasealeatoria"
                 min="2" max="25"></input>
@@ -33,7 +47,7 @@ export default function frases() {
           </div>
           <br />
           <div>
-            <p>Sacar una frase de un personaje. (Ej: Jon):</p>
+            <Paragrhafing label="Sacar una frase de un personaje. (Ej: jon, sansa):"/>
             <div>
               <input type="text" id="nombrebuscarfrasepersonaje" />
               <span className="espacio"></span>
@@ -44,7 +58,7 @@ export default function frases() {
           </div>
           <br />
           <div>
-            <p>Buscar un número de frases de un personaje.</p>
+            <Paragrhafing label="Buscar un número de frases de un personaje."/>
             <div>
               Nombre: <input type="text" id="nombrebuscarnumerofrasepersonaje" min="2" max="25" />
               <span className="espacio"></span>

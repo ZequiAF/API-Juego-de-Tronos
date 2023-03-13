@@ -1,6 +1,19 @@
 import React from "react";
 import {Link, Outlet } from "react-router-dom";
 
+// PROP TYPES!
+import PropTypes from 'prop-types';
+// DECLARAMOS LO QUE VA A HACER LA PROPTYPE
+const Header2 = ({label}) => <u><h2>{label}</h2></u>
+const Paragrhafing = ({label}) => <p>{label}</p>
+// DECIMOS QUE SEA STRING REQUERIDO
+Header2.propTypes = {
+  label: PropTypes.string.isRequired
+}
+Paragrhafing.propTypes = {
+  label: PropTypes.string.isRequired
+}
+
 export async function loader() {
   return null;
 }
@@ -10,17 +23,16 @@ export default function Casas() {
     <>
       <div id="cuerpo_casas" className="row">
           <div className="texto col-6">
-            <h2><u>Casas</u></h2>
+            <Header2 label="Casas"/>
             <div>
-              <p>Listar todas las casas:</p>
+              <Paragrhafing label="Listar todas las casas:"/>
               <Link to="buscar_casas"><button className="btn_busqueda" id="buscarcasas">
                 BUSCAR CASAS
               </button></Link>
             </div>
             <br />
             <div>
-              <p>Listar los miembros que pertenecen a una casa concreta. <br />
-                Introduzca nombre de la casa (Ej: lannister):</p>
+            <Paragrhafing label="Listar los miembros de una casa por nombre de la misma (Ej: lannister): "/>
               <div>
                 <input type="text" id="nombrebuscarcasa" />
                 <span className="espacio"></span>
