@@ -1,0 +1,6 @@
+# API-Juego-de-Tronos
+Trabajo grupito 8 sobre Juego de Tronos
+
+HOLA! ESTE ES NUESTRO README.md
+
+ESTO ES UNA API DE JUEGO DE TRONOS TRANSFORMADA A REACT
