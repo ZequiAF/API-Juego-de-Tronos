@@ -1,6 +1,5 @@
 import React from "react";
-import { Link ,Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, } from "react-router-dom";
-import "../visual.css";
+import { Link ,Outlet, } from "react-router-dom";
 
 export async function loader() {
   return null;

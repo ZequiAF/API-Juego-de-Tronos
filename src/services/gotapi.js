@@ -112,9 +112,7 @@ document.onkeydown = function (e) {
             teclaa = true;
             ck = true;
             console.log("Codigo Konami")
-            var url = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c638dc3d-fb1e-4774-b982-3b4bcd4bf834/deootv8-a9b037ed-8c10-4a92-98bd-fae70f102995.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2M2MzhkYzNkLWZiMWUtNDc3NC1iOTgyLTNiNGJjZDRiZjgzNFwvZGVvb3R2OC1hOWIwMzdlZC04YzEwLTRhOTItOThiZC1mYWU3MGYxMDI5OTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Zw0okretvh0ihaGl3aqkbq0jE_PHGRcwjLGnLkWTzhw";
-            document.body.style.backgroundImage = `url(${url})`;
-            document.body.style.color = "rgb(254 255 208)";
+            window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         } else {
             arriba1 = false;
             arriba2 = false;

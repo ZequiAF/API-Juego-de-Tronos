@@ -1,146 +1,210 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-synthesis: none;
+    font-weight: 400;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
+    color: #646cff;
+    font-weight: 500;
+    text-decoration: inherit;
+  }
 a:hover {
-  color: #535bf2;
-}
-
+    color: #535bf2;
+  }
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
+    margin: 0;
+    min-height: 100vh;
+    min-width: 320px;
+  }
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+    font-family: 'Tilt Prism', cursive;
+    font-size: 4.2em;
+    line-height: 1.1;
+  }
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.6em 1.2em;
+    transition: border-color 0.25s;
+  }
 button:hover {
-  border-color: #646cff;
-}
+    border-color: #646cff;
+  }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 @media (prefers-color-scheme: light) {
+    a:hover {
+      color: #747bff;
+    }
+
   :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
+      background-color: #ffffff;
+      color: #213547;
+    }
   button {
-    background-color: #f9f9f9;
+      background-color: #f9f9f9;
+    }
   }
-}
-
 body{
-  background-image: url("https://www.xtrafondos.com/wallpapers/juego-de-tronos-personajes-en-trono-de-hierro-3190.jpg");
-  background-size: cover;
-  color: white;
-}
-
+    background-image: url("https://www.xtrafondos.com/wallpapers/juego-de-tronos-personajes-en-trono-de-hierro-3190.jpg");
+    background-size: cover;
+    color: white;
+  }
+p{
+    font-family: 'Merienda', cursive;
+  }
+li{
+    font-family: monospace;
+  }
+.resultado__titulosformat{
+    font-size: 17px;
+    text-decoration: underline;
+  }
+.resultado__parrafoformat{
+    font-family: monospace;
+  }
 header{
-  background-color: #1a1a1a7a;
-  width: 100%;
-  min-height: 100px;
-}
+    background-color: #1a1a1a7a;
+    min-height: 100px;
+    width: 100%;
+  }
 #cuerpo{
-  min-height: 400px;
-  width: 100%;
-}
+    min-height: 400px;
+    width: 100%;
+  }
 .prenav{
-  float: left;
-}
+    float: left;
+  }
 .navegador{
-  padding-top: 2.5%; 
-  text-align: center;
-}
+    padding-top: 2.5%;
+    text-align: center;
+  }
 .cb{
-  clear: both;
-}
+    clear: both;
+  }
 .btn {
-  border-color: #000000;
-  color: #fff;
-  box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #000000;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-  min-width: 132.12px;
-  min-height: 37.33px;
-  width: 50%;
-}
+    -webkit-transition: all 150ms ease-in-out;
+    border-color: #000000;
+    box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #000000;
+    color: #fff;
+    min-height: 37.33px;
+    min-width: 132.12px;
+    transition: all 150ms ease-in-out;
+    width: 50%;
+  }
 .btn:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #000000;
-  color: white;
-}
-#cuerpo_personajes{
-  padding-top: 10px;
-   display: flex !important;
-  width: 100%;
-  min-height: 500px;
-}
-#cuerpo_casas{
-  padding-top: 10px;
-  display: flex !important;
-  width: 100%;
-  min-height: 500px;
-}
-#cuerpo_frases{
-  padding-top: 10px;
-  display: flex !important;;
-  width: 100%;
-  min-height: 500px;
-}
-.resultado_tipo{
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #000000;
+    color: white;
+  }
+#cuerpo__personajes, #cuerpo__casas, #cuerpo__frases{
+    display: flex !important;
+    min-height: 500px;
+    padding-top: 10px;
+    width: 100%;
+  }
+
+.row-fixed{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+.img-max img{
+    width: 100%;
+  }
+.texto{
+    padding-left: 2%;
+  }
+.card2{
+    height: 490px;
+    padding: 0 10px 20px 0;
+    width: 220px;
+  }
+header {
+    background-image: url("./images/a.jpeg");
+    min-height: 100px;
+    width: 100%;
+  }
+#cuerpo {
+    min-height: 400px;
+    width: 100%;
+  }
+.prenav {
+    float: left;
+  }
+.prenav img {
+    height: 100px;
+  }
+.navegador {
+    text-align: right;
+  }
+.cb {
+    clear: both;
+  }
+.btn {
+    -webkit-transition: all 150ms ease-in-out;
+    border-color: #fae900;
+    box-shadow: 0 0 40px 40px #000000 inset, 0 0 0 0 #000000;
+    color: #fff !important;
+    min-height: 37.33px;
+    min-width: 132.12px;
+    transition: all 150ms ease-in-out;
+    width: 50%;
+  }
+.btn:hover {
+    box-shadow: 0 0 40px 40px #fff inset, 0 0 10px 4px #000000;
+    color: rgb(0, 0, 0) !important;
+  }
+.cuerpo__casas--btnbusqueda, .cuerpo__frases--btnbusqueda, .cuerpo__personajes--btnbusqueda{
+    -webkit-transition: all 150ms ease-in-out;
+    background-color: black;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px 0 #b2bec6 inset;
+    color: white !important;
+    font-size: 12px;
+    transition: all 150ms ease-in-out;
+  }
+.btn_busqueda:hover{
+    border-color: #ffffff;
+    box-shadow: 0 0 10px 0 #b2bec6 inset, 0 0 4px 1px #ffffff;
+  }
+
+.cuerpo__casas--resultadotipo, .cuerpo__personajes--resultadotipo, .cuerpo__frases--resultadotipo {
+    background-color: #00000081;
+    color:white;
     height: 400px;
     overflow-y: scroll;
-    background-color: #646cff;
-}
-.row-fixed{
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-.img-max img{
-  width: 100%;
-}
-.texto{
-  padding-left: 2%;
-}
-.card2{
-  width: 220px;
-  height: 490px;
-  float: left;
-  padding: 0 10px 20px 0;
-}
+  }
+.row-fixed {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+.img-max img {
+    width: 100%;
+  }
+.texto {
+    padding-left: 2%;
+  }
+.boxnumero{
+    width: 60px;
+  }
+.cuerpo__frases--espacio, .cuerpo__casas--espacio, .cuerpo__personajes--espacio{
+    padding-left: 20px;
+  }
+.h1fix{
+    font-size: 2.5em !important;
+    margin-top: 1.5%;
+  }
