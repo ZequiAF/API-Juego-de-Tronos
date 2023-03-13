@@ -14,7 +14,7 @@ export default function buscar_frase_aleatoria() {
         <>
             <div className="col-12">
                 {resultado.map(({ sentence, character }) =>
-                    <div>
+                    <div key="">
                         <p>{sentence}</p>
                         <p>- {character.name}</p>
                     </div>

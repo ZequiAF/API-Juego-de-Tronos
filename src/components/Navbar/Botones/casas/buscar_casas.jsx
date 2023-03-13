@@ -13,13 +13,13 @@ export default function buscar_casas() {
     return (
         <>
             {resultado.map(({ name, slug, members }) =>
-                    <div className="col-6">
+                    <div key="" className="col-6">
                         <p>Nombre: {name}</p>
                         <p>Nombre: {slug}</p>
                         <p>Members:
                             <ul>
                                 {members.map(({ name, slug }) =>
-                                    <li>
+                                    <li key="">
                                         {name}
                                         {slug}
                                     </li>

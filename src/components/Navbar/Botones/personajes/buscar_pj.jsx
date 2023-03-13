@@ -13,7 +13,7 @@ export default function buscar_pj() {
     return (
         <>
             {resultado.map(({ name, slug, quotes }) =>
-                <div className="col-6">
+                <div key="" className="col-6">
                     <p>Nombre: {name}</p>
                     <p>Nombre: {slug}</p>
                     <p>Frases: {quotes}</p>

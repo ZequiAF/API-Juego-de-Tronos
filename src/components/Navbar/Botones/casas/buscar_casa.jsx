@@ -18,7 +18,7 @@ export default function buscar_casa() {
                     <p>Nombre: {resultado[0].slug}</p>
                     <ul>Members:
                         {(resultado[0].members).map(({ name, slug }) =>
-                            <li>
+                            <li key="">
                                 {name}
                                 {slug}
                             </li>
