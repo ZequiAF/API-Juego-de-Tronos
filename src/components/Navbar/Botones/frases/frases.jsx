@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import "../../../../index.css";
 
 // PROP TYPES!
 import PropTypes from 'prop-types';
@@ -46,7 +47,7 @@ export default function frases() {
           </div>
           <br />
           <div>
-            <Paragrhafing label="Sacar una frase de un personaje. (Ej: Jon):"/>
+            <Paragrhafing label="Sacar una frase de un personaje. (Ej: jon, sansa):"/>
             <div>
               <input type="text" id="nombrebuscarfrasepersonaje" />
               <span className="espacio"></span>

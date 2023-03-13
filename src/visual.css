@@ -41,6 +41,7 @@ header {
 }
 
 .btn_busqueda{
+    font-size: 12px;
     border-color: #ffffff;
     color: white !important;
     box-shadow: 0 0 10px 0 #b2bec6 inset;

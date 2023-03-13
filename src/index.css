@@ -30,7 +30,8 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-family: 'Tilt Prism', cursive;
+  font-size: 4.2em;
   line-height: 1.1;
 }
 
@@ -71,6 +72,23 @@ body{
   background-size: cover;
   color: white;
 }
+
+p{
+  font-family: 'Merienda', cursive;
+}
+li{
+  font-family: monospace;
+}
+
+.titulosformat{
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+.parrafoformat{
+  font-family: monospace;
+}
+
 
 header{
   background-color: #1a1a1a7a;
