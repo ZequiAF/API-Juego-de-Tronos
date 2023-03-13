@@ -1,24 +1,67 @@
-import { getRandomQuote } from "../../../../services/gotapi";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export async function loader() {
-  return getRandomQuote();
-  }
+  return null;
+}
 
 export default function frases() {
   return (
     <>
-      <div id="pruebas">
-        <h1>React Router GOT </h1>
-        <h5><i>FRASES</i></h5>
-        <h2>Frase 🗣</h2>
-        <h2>Mostrar una frase cualquiera</h2>
+      <div>
+        <div id="cuerpo_frases" className="row">
+        <div className="texto col-6">
+          <h2><u>Frases</u></h2>
+          <div>
+            <p>Listar una frase aleatoria:</p>
+            <Link to="buscar_frase_aleatoria"><button className="btn_busqueda">
+              FRASE ALEATORIA
+            </button></Link>
+          </div>
+          <br />
+
+          <div>
+            <p>Buscar un número de frases aleatorias.</p>
+            <div>
+              Nº<input type="number" id="numerofrasealeatoria"
+                min="2" max="25"></input>
+              <span className="espacio"></span>
+              <Link to="buscar_frases_aleatorias"><button className="btn_busqueda">
+                BUSCAR
+              </button></Link>
+            </div>
+          </div>
+          <br />
+          <div>
+            <p>Sacar una frase de un personaje. (Ej: Jon):</p>
+            <div>
+              <input type="text" id="nombrebuscarfrasepersonaje" />
+              <span className="espacio"></span>
+              <Link to="buscar_frase_pj"><button className="btn_busqueda">
+                FRASE DE PERSONAJE
+              </button></Link>
+            </div>
+          </div>
+          <br />
+          <div>
+            <p>Buscar un número de frases de un personaje.</p>
+            <div>
+              Nombre: <input type="text" id="nombrebuscarnumerofrasepersonaje" min="2" max="25" />
+              <span className="espacio"></span>
+              Nº<input type="number" id="numerobuscarnumerofrasepersonaje"
+                min="2" max="25"></input>
+              <span className="espacio"></span>
+              <Link to="buscar_frases_pj"><button className="btn_busqueda" id="buscarfrasespersonaje">
+                BUSCAR
+              </button></Link>
+            </div>
+          </div>
+        </div>
+        <div id="resultado_frases" className="resultado_tipo col-6">
+          <Outlet></Outlet>
+        </div>
       </div>
-      <div id="detail">
-        <Outlet />
       </div>
     </>
   );
 }
-  

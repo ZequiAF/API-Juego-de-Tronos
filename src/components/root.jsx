@@ -1,26 +1,29 @@
 import React from "react";
-import { getCharactersByName } from "../services/gotapi";
-import { Outlet } from "react-router-dom";
+import { Link ,Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, } from "react-router-dom";
+import "../visual.css";
 
 export async function loader() {
-  const characterByName = await getCharactersByName();
-  return { characterByName };
+  return null;
 }
 
 export default function Root() {
   return (
     <>
-      <div id="pruebaderoot">
-        <h1>React Router GOT </h1>
-        <h5><i>ROOT</i></h5>
-        <h2>Estimado Saecio:</h2>
-        <h2>Aquí va el programa principal, es como el header</h2>
-        <h2><b>Lo que pongas aquí aparece en todas las páginas</b></h2>
-        <br></br>
-      </div>
-      <div id="detail">
-        <Outlet />
-      </div>
+      <header>
+        <a href="https://www.hbomax.com/es/es/series/urn:hbo:series:GVU2cggagzYNJjhsJATwo" className="prenav">
+          <img src="//upload.gtarcade.com/got/2019/03/1552405117045.png" alt="got" className="img-fluid" />
+        </a>
+        <div className="row">
+          <nav className="col-6 float-left navegador row">
+            <div className="col"><Link to="/personajes"><button className="btn">Personajes</button></Link></div>
+            <div className="col"><Link to="/casas"><button className="btn">Casas</button></Link></div>
+            <div className="col"><Link to="/frases"><button className="btn">Frases</button></Link></div>
+          </nav>
+          <div className="col-1"></div>
+          <h1 className="col-4 h1fix">Game Of Thrones</h1>
+        </div>
+      </header>
+      <Outlet/>     
     </>
   );
 }

@@ -1,0 +1,25 @@
+import React from "react";
+import { useLoaderData } from "react-router-dom";
+import { getQuoteByCharacter } from "../../../../services/gotapi";
+
+export async function loader() {
+    return getQuoteByCharacter(document.getElementById("nombrebuscarnumerofrasepersonaje").value,document.getElementById("numerobuscarnumerofrasepersonaje").value);
+}
+
+export default function buscar_frase_aleatoria() {
+
+    const resultado = useLoaderData();
+
+    return (
+        <>
+            <div className="col-12">
+                {resultado.map(({ sentence, character }) =>
+                    <div>
+                        <p>{sentence}</p>
+                        <p>- {character.name}</p>
+                    </div>
+                )}
+            </div>
+        </>
+    );
+}
